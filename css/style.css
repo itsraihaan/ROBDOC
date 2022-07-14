@@ -1,0 +1,226 @@
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('../fonts/Roboto-Regular.eot');
+	src: local('☺'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.eot");
+    src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/Flaticon.woff2") format("woff2"),
+         url("../fonts/Flaticon.woff") format("woff"),
+         url("../fonts/Flaticon.ttf") format("truetype"),
+         url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: "Flaticon";
+      src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    }
+  }
+  
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+          font-size: 30px;
+  font-style: normal;
+  }
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.flaticon-microphone:before { content: "\f100"; }
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body{font-family: 'Roboto-Regular';background: #E7F2F1;}
+header {
+    height: 60px;
+    background: #fff;
+    color: #03283B;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    box-shadow: 10px 0 5px #b9b7b7;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    border-radius: 15px;
+}
+.main {
+    width: 100%;
+    float: left;
+    margin-top: 60px;
+    padding: 30px 0;
+    border-radius: 15px;
+}
+.main button {
+    background: #ff3b3b;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #666;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.main button:focus{outline: none;}
+.container {
+    width: 85%;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+.user-area, .chatbot-area {
+    width: 20%;
+    height: calc(100vh - 60px);
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 80px;
+    border-radius: 15px;
+    z-index: 99999;
+}
+.chatbot-area {
+    float: right;
+    right: 80px;
+    left: auto;
+    border-radius: 15px;
+
+
+}
+.user-area img, .chatbot-area img {
+    width: 100%;
+}
+.user-area img{left: 0;}
+.chatarea-main {
+    width: 42%;
+    margin: 0 auto;
+}
+.chatarea-outer {
+    border-radius: 15px;
+    width: 100%;
+    float: left;
+}
+.chatbot-area .chatarea-main{float: left;}
+.chatarea.user {
+    float: right;
+    width: 40%;
+    padding: 20px 0;
+    border-radius: 15px;
+}
+
+.chatarea-inner {
+    float: left;
+    width: 60%;
+    padding: 10px;
+    color: #fff;
+    position: relative;
+    margin: 5px 0;
+    border-radius: 15px;
+    padding: 30px;
+}
+.chatarea-inner.user{
+    background: #6522A4;
+    border-radius:15px ;
+    padding: 30px;
+}
+.chatarea-inner.chatbot{
+    background: #466EB6;
+    float: right;
+    border-radius: 15px;
+}
+.chatarea-inner.user:before {
+    content: '';
+    position: absolute;
+    border-right: 20px solid #6522A4;
+    border-top: 20px solid transparent;
+    border-bottom: 0px solid transparent;
+    bottom: 0;
+    border-radius: 15px;
+    left: -20px;
+}
+.chatarea-inner.chatbot:before {
+    content: '';
+    position: absolute;
+    border-left: 20px solid #466EB6;
+    border-top: 20px solid transparent;
+    border-bottom: 0px solid transparent;
+    bottom: 0;
+    border-radius: 15px;
+    right: -20px;
+}
+
+.chatbot-area .chatarea-inner{float: left;border-radius: 15px;}
+
