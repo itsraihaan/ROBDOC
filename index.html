@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .container {
+          display: block;
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 20px;
+          cursor: pointer;
+          font-size: 25px;
+        }
+        
+        /* Hide the default checkbox */
+        .container input {
+          visibility: hidden;
+          cursor: pointer;
+        }
+        
+        /* Create a custom checkbox */
+        .mark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          background-color: lightgray;
+        }
+        
+        .container:hover input ~ .mark {
+          background-color: gray;
+        }
+        
+        .container input:checked ~ .mark {
+          background-color: purple;
+        border-radius:50px;
+        }
+        
+        
+        /* Create the mark/indicator (hidden when not checked) */
+        .mark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        
+        /* Show the mark when checked */
+        .container input:checked ~ .mark:after {
+          display: block;
+        }
+        
+        /* Style the mark/indicator */
+        .container .mark:after {
+          left: 9px;
+          top: 5px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          transform: rotate(45deg);
+        }
+        </style>
+</head>
+
+<body>
+    <header>Chat with RobDoc</header>
+    <section class="main">
+            <div class="user-area">
+                <img src="images/user.png">
+            </div>
+            <div class="chatarea-main">
+                <div class="chatarea-outer">
+                    <div class="chatarea-inner user">Hi there! My name is Crest, your medical assistant. I can asses your health condition and provide suitable remidies. To start, please ask a question,
+                          and I’ll be happy to assist you right away!</div>
+                          <script>
+                            function openForm() {
+                              document.getElementById("myForm").style.display = "block";
+                            }
+                            
+                            function closeForm() {
+                              document.getElementById("myForm").style.display = "none";
+                            }
+                            </script>
+                            <br><br><br><br><br><br><br>
+             
+                            
+                          <!-- <div id="myForm">
+                            <form action="/action_page.php" class="form-container">
+                                
+                                    <body>
+                                    
+                                    <h1>Symptoms</h1>
+                                    <label class="container">nasal congestion, itchy and watery eyes
+                                      <input type="checkbox">
+                                      <span class="mark"></span>
+                                    </label>
+                                    <label class="container">Feel tired or lightheaded
+                                      <input type="checkbox">
+                                      <span class="mark"></span>
+                                    </label>
+                                    <label class="container">Headaches, body aches, feve
+                                      <input type="checkbox">
+                                      <span class="mark"></span>
+                                    </label>
+                                    <label class="container">shortness of breath, chest pain,cough
+                                      <input type="checkbox">
+                                      <span class="mark"></span>
+                                    </label>
+                                    <button class="open-button" onclick="openForm()">Chat</button>
+                                   
+                                        
+                              </form>
+                            </div> -->
+                </div>
+            </div>    
+            <div class="chatbot-area">
+                <img src="images/chatbot.png">
+            </div>
+
+        <button id="mic"><i class="flaticon-microphone"></i></button>
+    </section>
+    <script src="js/main.js"></script>
+    <!-- <input type="text" id="msg_send" placeholder="New Message"> <button class="send" id="reply">Send <i class="fas fa-paper-plane"></i></button> -->
+</body>
+</html>
